@@ -30,3 +30,4 @@ background_point_color : #fafafa
 btn_left_color : #F8DBDC
 btn_right_color : #F6E8F1
 btn_gradient_color
+아무렇게나 고친다
