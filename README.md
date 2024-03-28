@@ -1,3 +1,10 @@
+김동일 - header
+김대열 - content01
+하태민 - content02
+임현 - footer
+!!! 본인과 관련된 파일만 작성해주세요 !!!
+
+
 slider - swiper
 bootstrap - 그리드
 json_data -
