@@ -1,3 +1,4 @@
+!!!! mian branch 절대 건들지 마세요...ㅠㅠ 자기 브런치 따로 만들어서 작업 해주세요!!!!
 김동일 - header
 김대열 - content01
 하태민 - content02
@@ -29,3 +30,4 @@ background_point_color : #fafafa
 btn_left_color : #F8DBDC
 btn_right_color : #F6E8F1
 btn_gradient_color
+아무렇게나 고친다
