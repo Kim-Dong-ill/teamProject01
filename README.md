@@ -5,7 +5,6 @@
 임현 - footer
 !!! 본인과 관련된 파일만 작성해주세요 !!!
 
-
 slider - swiper
 bootstrap - 그리드
 json_data -
@@ -30,4 +29,3 @@ background_point_color : #fafafa
 btn_left_color : #F8DBDC
 btn_right_color : #F6E8F1
 btn_gradient_color
-아무렇게나 고친다
