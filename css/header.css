@@ -1,1 +1,356 @@
 /* 김동일님 */
+/* body {
+  background-color: #000;
+} */
+
+.header {
+  position: fixed;
+  font-size: 17px;
+  height: 70px;
+  width: 100%;
+}
+.header .headerInner {
+  padding: 0 40px;
+  height: inherit;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .headerInner .headerMenu-box {
+  height: inherit;
+}
+.header .headerInner .headerMenu-box .menu-wrap:hover li {
+  padding: 23px 40px;
+}
+.header .headerInner .headerMenu-box .menu-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+}
+.header .headerInner .headerMenu-box .menu-wrap .mainMenu {
+  transition: 0.35s;
+  padding: 23px;
+}
+.header .headerInner .headerMenu-box .menu-wrap .subMenuWrap {
+  font-size: 13px;
+  display: none;
+  border: 1px solid #e9dede;
+  position: absolute;
+  top: 70px;
+  left: -14%;
+  height: 300px;
+  width: 120%;
+}
+.header .headerInner .headerMenu-box .menu-wrap .subMenuWrap .subMenu {
+  display: flex;
+  justify-content: center;
+}
+.header
+  .headerInner
+  .headerMenu-box
+  .menu-wrap
+  .subMenuWrap
+  .subMenu
+  ul:nth-child(1) {
+  width: 112px;
+}
+.header
+  .headerInner
+  .headerMenu-box
+  .menu-wrap
+  .subMenuWrap
+  .subMenu
+  ul:nth-child(2) {
+  width: 96px;
+}
+.header
+  .headerInner
+  .headerMenu-box
+  .menu-wrap
+  .subMenuWrap
+  .subMenu
+  ul:nth-child(3) {
+  width: 96px;
+}
+.header
+  .headerInner
+  .headerMenu-box
+  .menu-wrap
+  .subMenuWrap
+  .subMenu
+  ul:nth-child(4) {
+  width: 144px;
+}
+.header
+  .headerInner
+  .headerMenu-box
+  .menu-wrap
+  .subMenuWrap
+  .subMenu
+  ul:nth-child(5) {
+  width: 112px;
+}
+.header
+  .headerInner
+  .headerMenu-box
+  .menu-wrap
+  .subMenuWrap
+  .subMenu
+  ul:nth-child(6) {
+  width: 128px;
+}
+.header .headerInner .headerMenu-box .menu-wrap .subMenuWrap .subMenu li {
+  padding: 10px 23px;
+}
+.header .headerInner .headerNav {
+  width: 275px;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .headerInner .headerNav .navBtn {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.header .headerInner .headerNav .navBtn .language {
+  width: 81px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: start;
+}
+.header .headerInner .headerNav .navBtn .language ul .kor {
+  width: 81px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.header .headerInner .headerNav .navBtn .language ul .languageBtn {
+  display: none;
+}
+.header
+  .headerInner
+  .headerNav
+  .navBtn
+  .language
+  ul
+  .languageBtn
+  li:nth-child(1) {
+  width: 81px;
+  height: 40px;
+  border: 1px solid #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header
+  .headerInner
+  .headerNav
+  .navBtn
+  .language
+  ul
+  .languageBtn
+  li:nth-child(2) {
+  width: 81px;
+  height: 40px;
+  border: 1px solid #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header
+  .headerInner
+  .headerNav
+  .navBtn
+  .language
+  ul
+  .languageBtn
+  li:nth-child(3) {
+  width: 81px;
+  height: 40px;
+  border: 1px solid #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header
+  .headerInner
+  .headerNav
+  .navBtn
+  .language
+  ul
+  .languageBtn
+  li:nth-child(4) {
+  width: 81px;
+  height: 40px;
+  border: 1px solid #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header
+  .headerInner
+  .headerNav
+  .navBtn
+  .language
+  ul
+  .languageBtn
+  li:nth-child(5) {
+  width: 81px;
+  height: 40px;
+  border: 1px solid #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header
+  .headerInner
+  .headerNav
+  .navBtn
+  .language
+  ul
+  .languageBtn
+  li:nth-child(6) {
+  width: 81px;
+  height: 40px;
+  border: 1px solid #f8f8f8;
+  border-radius: 0 0 25px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .headerInner .headerNav .navBtn .family-site {
+  width: 130px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: start;
+}
+.header .headerInner .headerNav .navBtn .family-site ul .familyBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff9f9;
+  border-radius: 20px;
+  width: 130px;
+  height: 40px;
+  gap: 5px;
+}
+.header .headerInner .headerNav .navBtn .family-site ul .familyEct {
+  display: none;
+}
+.header
+  .headerInner
+  .headerNav
+  .navBtn
+  .family-site
+  ul
+  .familyEct
+  li:nth-child(1) {
+  width: 130px;
+  height: 40px;
+  border: 1px solid #fff9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header
+  .headerInner
+  .headerNav
+  .navBtn
+  .family-site
+  ul
+  .familyEct
+  li:nth-child(2) {
+  width: 130px;
+  height: 40px;
+  border: 1px solid #fff9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header
+  .headerInner
+  .headerNav
+  .navBtn
+  .family-site
+  ul
+  .familyEct
+  li:nth-child(3) {
+  width: 130px;
+  height: 40px;
+  border: 1px solid #fff9f9;
+  border-radius: 0 0 25px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .headerInner .headerNav .burgerMenu {
+  display: none;
+  color: white;
+}
+
+@media screen and (max-width: 1279px) {
+  .headerMenu-box {
+    display: none;
+  }
+  .headerNav {
+    width: 60px !important;
+  }
+  .headerNav .serch img {
+    width: 18px;
+  }
+  .headerNav .navBtn {
+    display: none !important;
+  }
+  .headerNav .burgerMenu {
+    display: block !important;
+  }
+}
+.mobileMenu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: none;
+  color: #000;
+  background-color: #e9dede;
+}
+.mobileMenu .mobileMenuHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+.mobileMenu .mobileMenuHeader .mobileMenuNav {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  height: 70px;
+}
+.mobileMenu .mobileMenuHeader .mobileSerch img {
+  width: 20px;
+}
+.mobileMenu .mobileMenuWrap {
+  font-weight: bold;
+  margin-top: 20px;
+}
+.mobileMenu .mobileMenuWrap ul li {
+  height: 80px;
+  padding: 0 30px;
+}
+.mobileMenu .mobileMenuWrap ul li a {
+  line-height: 60px;
+} /*# sourceMappingURL=index.css.map */
