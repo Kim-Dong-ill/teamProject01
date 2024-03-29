@@ -1,0 +1,40 @@
+{
+    "content":[
+        {"title":"Beauty",
+        "subtitle":"뷰티",
+        "text":"아름다움의 무한한 가능성을 품은 당신을 위한 뷰티풀 모먼트",
+        "image":[
+            {"path":"./images/content3_01.jpg"},
+            {"path":"./images/content3_02.jpg"},
+            {"path":"./images/content3_03.jpg"},
+            {"path":"./images/content3_04.jpg"}
+    
+        ]
+    },
+    {"title":"Personal Care",
+    "subtitle":"퍼스널 케어",
+    "text":"당신의 일상에 건강하고 향기로운 아름다움을 선사합니다.",
+    "image":[
+        {"path":"./images/content4_01.jpg"},
+        {"path":"./images/content4_02.jpg"},
+        {"path":"./images/content4_03.jpg"},
+        {"path":"./images/content4_04.jpg"},
+        {"path":"./images/content4_05.jpg"}
+
+    ]
+}
+,
+    {"title":"Home Care",
+    "subtitle":"홈 케어",
+    "text":"나의 일상 생활을 깨끗하게 편리하게 가치있게.",
+    "image":[
+        {"path":"./images/content5_01.jpg"},
+        {"path":"./images/content5_02.jpg"},
+        {"path":"./images/content5_03.jpg"},
+        {"path":"./images/content5_04.jpg"},
+        {"path":"./images/content5_05.jpg"}
+
+    ]
+}
+    ]
+}
