@@ -115,6 +115,7 @@ const company = [
 function family1(index) {
   let text = "";
   $(".mapModal").css("display", "block");
+  $("body").css("background", "#000000c5");
   console.log(index);
   text += `
   <div class="mapTitle">${company[index].name}</div>
@@ -134,6 +135,7 @@ function family1(index) {
 function family2(index) {
   let text = "";
   $(".mapModal").css("display", "block");
+  $("body").css("background", "#000000c5");
   console.log(index);
   text += `
   <div class="mapTitle">${company[index].name}</div>
@@ -153,6 +155,7 @@ function family2(index) {
 function family3(index) {
   let text = "";
   $(".mapModal").css("display", "block");
+  $("body").css("background", "#000000c5");
   console.log(index);
   text += `
   <div class="mapTitle">${company[index].name}</div>

@@ -1,13 +1,13 @@
 /*# sourceMappingURL=header.css.map */
 /* 김동일님 */
 /* body {
-  background-color: #000;
+  background-color: #000000c5;
 } */
 
 .header {
   color: white;
   position: fixed;
-  z-index: 9999;
+  z-index: 99999;
   font-size: 17px;
   height: 70px;
   width: 100%;
@@ -28,6 +28,30 @@
 }
 .header .headerInner .headerMenu-box .menu-wrap:hover li {
   padding: 23px 40px;
+}
+.header .headerInner .headerMenu-box .menu-wrap:hover .subMenu ul:nth-child(1) {
+  width: calc(112px + 30px) !important;
+  transition: 0.5s;
+}
+.header .headerInner .headerMenu-box .menu-wrap:hover .subMenu ul:nth-child(2) {
+  width: calc(96px + 30px) !important;
+  transition: 0.5s;
+}
+.header .headerInner .headerMenu-box .menu-wrap:hover .subMenu ul:nth-child(3) {
+  width: calc(96px + 30px) !important;
+  transition: 0.5s;
+}
+.header .headerInner .headerMenu-box .menu-wrap:hover .subMenu ul:nth-child(4) {
+  width: calc(114px + 30px) !important;
+  transition: 0.5s;
+}
+.header .headerInner .headerMenu-box .menu-wrap:hover .subMenu ul:nth-child(5) {
+  width: calc(112px + 30px) !important;
+  transition: 0.5s;
+}
+.header .headerInner .headerMenu-box .menu-wrap:hover .subMenu ul:nth-child(6) {
+  width: calc(128px + 30px) !important;
+  transition: 0.5s;
 }
 .header .headerInner .headerMenu-box .menu-wrap {
   display: flex;
