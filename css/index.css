@@ -1,13 +1,1 @@
 @import url(/globalcss/global.css);
-body .header {
-  height: 70px;
-  width: 100%;
-  background-color: rgba(255, 228, 196, 0.363);
-  border: 1px solid #000;
-  position: fixed;
-  top: 0;
-}
-body .main-visual {
-  height: 100vh;
-  background-color: skyblue;
-}/*# sourceMappingURL=index.css.map */
