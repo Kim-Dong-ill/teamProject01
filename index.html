@@ -136,9 +136,15 @@
                   <img src="/images/drop_down_wh.png" alt="" />
                 </li>
                 <div class="familyEct">
-                  <li><a href="#">루나 직영몰</a></li>
-                  <li><a href="#">본사 직영몰</a></li>
-                  <li><a href="#">애경 S.T</a></li>
+                  <li class="family1" onclick="family1(0)">
+                    <a href="#">본사 직영몰</a>
+                  </li>
+                  <li class="family2" onclick="family2(1)">
+                    <a href="#">루나 직영몰</a>
+                  </li>
+                  <li class="family3" onclick="family3(2)">
+                    <a href="#">애경 S.T</a>
+                  </li>
                 </div>
               </ul>
             </div>
@@ -196,6 +202,35 @@
       </div>
     </div>
     <!-- mobile menu end -->
+
+    <!-- map modal -->
+    <div class="container mapModal">
+      <div class="row mapWrap">
+        <div class="mapImg col-12 col-md-8" id="map"></div>
+
+        <div class="mapContent col-12 col-md-4">
+          <div class="mapContentInner">
+            <div class="mapContentCloseBtn">
+              <img src="./images/sh_close_btn.png" alt="" />
+            </div>
+            <div class="mapContentText">
+              <!-- <div class="mapTitle">애경산업(주)</div>
+              <div class="mapSubTitle">
+                <i class="fa-solid fa-city"></i> 제조업체
+              </div>
+              <div class="mapLocation">
+                <i class="fa-solid fa-location-dot"></i> 서울특별시 마포구
+                양화로 188
+              </div>
+              <div class="mapPhone">
+                <i class="fa-solid fa-phone"></i> 02-768-2000
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- header end -->
 
     <!-- contents_01 -->
@@ -421,10 +456,14 @@
       </div>
     </div>
 
-    <div class="a">a수정수정수정수젓ㅇ</div>
-
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- kakao map -->
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7b2abe9be42ad1bc0c2df885dee2ee92"
+    ></script>
 
     <!-- isotope -->
     <link rel="stylesheet" href="/js/isotope.pkgd.min.js" />
@@ -441,6 +480,7 @@
     <script src="./js/content01.js"></script>
     <script src="./js/content02.js"></script>
     <script src="./js/isotope.pkgd.min.js"></script>
+
     <script>
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 3,
