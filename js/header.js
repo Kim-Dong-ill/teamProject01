@@ -1,4 +1,14 @@
 // 김동일
+
+//스크롤시 이벤트
+let scroll = true;
+$(window).scroll(function () {
+  if (scroll == true) {
+  }
+  scroll = false;
+  console.log(scroll);
+});
+
 // 언어 버튼 토글
 $(".kor").click(function () {
   $(".kor").css("border-radius", 0);
