@@ -1,18 +1,23 @@
+/*# sourceMappingURL=header.css.map */
 /* 김동일님 */
 /* body {
-  background-color: #000;
+  background-color: #000000c5;
 } */
 
 .header {
+  color: white;
   position: fixed;
+  z-index: 99999;
   font-size: 17px;
   height: 70px;
   width: 100%;
 }
+.header p {
+  margin-bottom: 0 !important;
+}
 .header .headerInner {
   padding: 0 40px;
   height: inherit;
-  border: 1px solid #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,6 +27,30 @@
 }
 .header .headerInner .headerMenu-box .menu-wrap:hover li {
   padding: 23px 40px;
+}
+.header .headerInner .headerMenu-box .menu-wrap:hover .subMenu ul:nth-child(1) {
+  width: calc(112px + 30px) !important;
+  transition: 0.8s;
+}
+.header .headerInner .headerMenu-box .menu-wrap:hover .subMenu ul:nth-child(2) {
+  width: calc(96px + 30px) !important;
+  transition: 0.8s;
+}
+.header .headerInner .headerMenu-box .menu-wrap:hover .subMenu ul:nth-child(3) {
+  width: calc(96px + 30px) !important;
+  transition: 0.8s;
+}
+.header .headerInner .headerMenu-box .menu-wrap:hover .subMenu ul:nth-child(4) {
+  width: calc(114px + 30px) !important;
+  transition: 0.8s;
+}
+.header .headerInner .headerMenu-box .menu-wrap:hover .subMenu ul:nth-child(5) {
+  width: calc(112px + 30px) !important;
+  transition: 0.8s;
+}
+.header .headerInner .headerMenu-box .menu-wrap:hover .subMenu ul:nth-child(6) {
+  width: calc(128px + 30px) !important;
+  transition: 0.8s;
 }
 .header .headerInner .headerMenu-box .menu-wrap {
   display: flex;
@@ -320,12 +349,13 @@
 }
 .mobileMenu {
   position: absolute;
+  z-index: 99999;
   width: 100%;
   height: 100%;
   top: 0;
   display: none;
   color: #000;
-  background-color: #e9dede;
+  background-color: #f5f5f5;
 }
 .mobileMenu .mobileMenuHeader {
   display: flex;
@@ -354,3 +384,71 @@
 .mobileMenu .mobileMenuWrap ul li a {
   line-height: 60px;
 } /*# sourceMappingURL=index.css.map */
+
+.mapModal {
+  display: none;
+  position: absolute;
+  z-index: 88;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 70%; */
+  /* height: 70%; */
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: white;
+}
+.mapModal .mapWrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 30px;
+}
+.mapModal .mapImg {
+  height: 500px;
+}
+.mapModal .mapContent {
+  height: 100%;
+}
+.mapContent .mapContentInner {
+  height: 500px;
+  padding: 10px;
+}
+.mapContent .mapContentInner .mapContentCloseBtn {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.mapContentInner .mapContentText .mapTitle {
+  font-size: xx-large;
+  font-weight: bold;
+  padding: 20px 0;
+}
+.mapContentInner .mapContentText {
+  font-size: larger;
+}
+.mapContentInner .mapContentText .mapSubTitle {
+  padding: 50px 0 10px 0;
+}
+.mapContentInner .mapContentText .mapLocation {
+  padding: 10px 0;
+}
+.mapContentInner .mapContentText .mapPhone {
+  padding: 10px 0;
+}
+#weatherMap {
+  border: 1px solid #000;
+  width: 500px;
+  height: 500px;
+}
+/* map css */
+
+@media screen and (max-width: 768px) {
+  .mapModal .mapImg {
+    height: 300px;
+    overflow: hidden;
+  }
+  .mapModal .mapContent {
+    height: 300px;
+  }
+}
