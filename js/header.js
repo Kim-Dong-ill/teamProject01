@@ -1,12 +1,12 @@
 // 김동일
 
 //스크롤시 이벤트
-let scroll = true;
-$(window).scroll(function () {
-  if (scroll == true) {
+window.addEventListener("scroll", function () {
+  if (window.pageYOffset > 1) {
+    console.log("현재 스크롤 Y 위치가 200px보다 크다");
+  } else {
+    console.log("현재 스크롤 Y 위치가 200px보다 작다");
   }
-  scroll = false;
-  console.log(scroll);
 });
 
 // 언어 버튼 토글
@@ -122,6 +122,7 @@ const company = [
   },
 ];
 
+// 자회사 클릭시 모당창 팝업
 function family1(index) {
   let text = "";
   $(".mapModal").css("display", "block");
@@ -181,19 +182,82 @@ function family3(index) {
   `;
   $(".mapContentText").html(text);
 }
+// 자회사 클릭시 모당창 팝업 end
 
-// for (let i = 0; i < company.length; i++) {
-//   text += `
-//           <div class="mapTitle">${company[i].name}</div>
-//             <div class="mapSubTitle">
-//               <i class="fa-solid fa-city"></i>${company[i].work}
-//             </div>
-//             <div class="mapLocation">
-//               <i class="fa-solid fa-location-dot"></i>${company[i].location}
-//             </div>
-//             <div class="mapPhone">
-//               <i class="fa-solid fa-phone"></i>${company[i].phone}
-//             </div>
-//           `;
-// }
-// $(".mapContentText").html(text);
+//weather api 가져오기
+
+//전역변수
+// let weatherMap;
+let cities;
+let cityCnt = 0;
+let params = {
+  appid: "852d267b2f480b2a7538f551fee08af7",
+  units: "metric",
+  lang: "ko",
+};
+const weatherApi = "https://api.openweathermap.org/data/2.5/weather";
+
+//함수
+function mapInit() {
+  var options = {
+    center: new kakao.maps.LatLng(37.55587, 126.97302),
+    level: 13,
+    // draggable:false,
+    // zoomable:false,
+    disableDoubleClick: true,
+  };
+
+  map = new kakao.maps.Map($("#weatherMap")[0], options);
+  axios.get("./json/cities.json").then(onGetCity);
+}
+
+function onGetCity(r) {
+  // console.log(r.data);
+  cities = r.data.cities; // []
+  cities.forEach(function (item) {
+    params.lat = item.lat; // cities[i].lat
+    params.log = item.lon;
+    params.id = item.id;
+    // console.log(item.lat);
+    console.log(params.lat);
+    axios.get(weatherApi, { params }).then(onCreateMaker);
+  });
+}
+
+function onCreateMaker(r) {
+  console.log(r.data);
+  cityCnt++;
+  //   console.log(cityCnt);
+
+  let city = cities.filter(function (v) {
+    return v.id === r.data.id;
+  });
+  console.log(city);
+
+  let content = "";
+  for (let i = 0; i < cities.length; i++) {
+    content += `
+    <div class="weatherCard">
+        <div class="weatherTitle">
+          <div class="weatherName">${city[i].name}</div>
+          <div class="weatherImg"><img src="http://openweathermap.org/img/wn/${r.data.weather[0].icon}.png"></div>
+        </div>
+        <div class="weatherTemp">현재온도 : ${r.data.main.temp}도</div>
+      </div>
+    `;
+  }
+  let position = new kakao.maps.LatLng(r.data.coord.lat, r.data.coord.lon);
+
+  // 커스텀 오버레이를 생성합니다
+  var customOverlay = new kakao.maps.CustomOverlay({
+    position: position,
+    content: content,
+  });
+  // 커스텀 오버레이를 지도에 표시합니다
+  customOverlay.setMap(map);
+}
+
+//실행
+mapInit();
+
+//weather api 가져오기 end

@@ -230,11 +230,43 @@
         </div>
       </div>
     </div>
+    <!-- map modal end -->
 
+    <!-- weather modal -->
+    <div id="weatherMap">
+      <div class="weatherCard">
+        <div class="weatherTitle">
+          <div class="weatherName">이름</div>
+          <div class="weatherImg">아이콘</div>
+        </div>
+        <div class="weatherTemp">현재 온도</div>
+      </div>
+    </div>
+    <!-- weather modal end -->
     <!-- header end -->
 
     <!-- contents_01 -->
-    <div class="main-visual"></div>
+    <div class="main-visual">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col content01">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/pc_main_1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/pc_main_2.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/pc_main_3.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- contents_02 -->
     <div class="container">
@@ -481,7 +513,7 @@
     <script src="./js/content02.js"></script>
     <script src="./js/isotope.pkgd.min.js"></script>
 
-    <script>
+    <!-- <script>
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 3,
         spaceBetween: 30,
@@ -501,6 +533,6 @@
           prevEl: ".swiper-button-prev",
         },
       });
-    </script>
+    </script> -->
   </body>
 </html>
