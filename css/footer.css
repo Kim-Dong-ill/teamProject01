@@ -1,1 +1,11 @@
 /* 임현님 */
+.f {
+    display: flex;
+    height: 100%;
+}
+.laft {
+    margin-right: auto;
+}
+.address mo_989 {
+    color: rgba(0, 0, 0, 0.5);
+}
