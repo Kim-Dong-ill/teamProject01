@@ -45,6 +45,9 @@
 .con5st .button>a>img{
     
 }
+.con5st #mobileButton{
+    display: none;
+}
 
 /* 컨테이너 6 */
 .containerWrap{
@@ -143,3 +146,63 @@
     left: 70%;
 
 }
+
+
+
+@media screen and (max-width: 768px){
+    .con5st .button{
+        display: none;
+    }
+    .con5st .text{
+        padding-bottom: 0px;
+    }
+    
+    .con5st #mobileButton{
+        display: block;
+        background-color: #fafafa;
+    border-radius: 30px;
+    margin: 10px;
+    margin-top: 30px;
+    text-align: center;
+    padding: 10px;
+    width: 130px;
+    }
+    .con5st #mobileButton img{
+        width: auto;
+        height: auto;
+    }
+
+    /*컨테이너6 모바일*/
+    .con6st .d-flex{
+        flex-direction: column;
+    }
+    .con6st .swiper-button-next::after{
+        content: "";
+    }
+    .con6st .swiper-button-prev::after{
+        content: "";
+    }
+    .swiper-horizontal>.swiper-pagination-bullets{
+        width: 100%;
+      
+    }
+    .con6st .swiper-pagination{
+        bottom: 30%;
+    }
+    .con6st .imgWrap{
+        height: 480px;
+        margin-top: 27%;
+    }
+    
+    .swiper-slide .textbox .titlebox {
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        z-index: 1; 
+      }
+    .con6st .bgnews{
+        display: none;
+    }
+
+   
+} 
