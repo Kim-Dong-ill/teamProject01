@@ -99,12 +99,19 @@ function madalMap() {
   // kakao map
   var mapContainer = document.getElementById("map"), // 지도를 표시할 div
     mapOption = {
-      center: new kakao.maps.LatLng(37.023357, 126.782751), // 지도의 중심좌표
+      center: new kakao.maps.LatLng(37.557782, 126.926323), // 지도의 중심좌표
       level: 3, // 지도의 확대 레벨
     };
 
   var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+  // 지도를 표시하는 div 크기를 변경하는 함수입니다
 
+  function relayout() {
+    // 지도를 표시하는 div 크기를 변경한 이후 지도가 정상적으로 표출되지 않을 수도 있습니다
+    // 크기를 변경한 이후에는 반드시  map.relayout 함수를 호출해야 합니다
+    // window의 resize 이벤트에 의한 크기변경은 map.relayout 함수가 자동으로 호출됩니다
+    map.relayout();
+  }
   // 마커가 표시될 위치입니다
   var markerPosition = new kakao.maps.LatLng(37.557782, 126.926323);
 
@@ -141,24 +148,23 @@ const company = [
 
 // 자회사 클릭시 모당창 팝업
 function family1(index) {
-  madalMap();
   // console.log(company);
   let text = "";
   $(".mapModal").css("display", "block");
-  $("body").css("background", "#000000c5");
   // console.log(index);
   text += `
   <div class="mapTitle">${company[index].name}</div>
-    <div class="mapSubTitle">
-      <i class="fa-solid fa-city"></i>${company[index].work}
-    </div>
-    <div class="mapLocation">
-      <i class="fa-solid fa-location-dot"></i>${company[index].location}
-    </div>
-    <div class="mapPhone">
-      <i class="fa-solid fa-phone"></i>${company[index].phone}
-    </div>
+  <div class="mapSubTitle">
+  <i class="fa-solid fa-city"></i>${company[index].work}
+  </div>
+  <div class="mapLocation">
+  <i class="fa-solid fa-location-dot"></i>${company[index].location}
+  </div>
+  <div class="mapPhone">
+  <i class="fa-solid fa-phone"></i>${company[index].phone}
+  </div>
   `;
+  madalMap();
   console.log(text);
   $(".mapContentText").html(text);
 }
@@ -167,7 +173,6 @@ function family2(index) {
   madalMap();
   let text = "";
   $(".mapModal").css("display", "block");
-  $("body").css("background", "#000000c5");
   console.log(index);
   text += `
   <div class="mapTitle">${company[index].name}</div>
@@ -188,7 +193,6 @@ function family3(index) {
   madalMap();
   let text = "";
   $(".mapModal").css("display", "block");
-  $("body").css("background", "#000000c5");
   console.log(index);
   text += `
   <div class="mapTitle">${company[index].name}</div>
@@ -230,6 +234,12 @@ function mapInit() {
   };
 
   map = new kakao.maps.Map($("#weatherMap")[0], options);
+  function relayout() {
+    // 지도를 표시하는 div 크기를 변경한 이후 지도가 정상적으로 표출되지 않을 수도 있습니다
+    // 크기를 변경한 이후에는 반드시  map.relayout 함수를 호출해야 합니다
+    // window의 resize 이벤트에 의한 크기변경은 map.relayout 함수가 자동으로 호출됩니다
+    map.relayout();
+  }
   axios.get("./json/cities.json").then(onGetCity);
 }
 
@@ -282,12 +292,14 @@ function onCreateMaker(r) {
   customOverlay.setMap(map);
 }
 
-//실행
-mapInit();
-
 //weather api 가져오기 end
 
 //weather 클릭시 팝업창
 $("#serch a").click(function () {
   $("#weatherMap").css("display", "block");
+  //실행
+  mapInit();
+});
+$(".weatherMapWrapClose>img").click(function () {
+  $("#weatherMap").css("display", "none");
 });
