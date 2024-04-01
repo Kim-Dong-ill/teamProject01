@@ -97,6 +97,9 @@
   display: flex;
   justify-content: center;
 }
+.header .headerInner .headerMenu-box .menu-wrap .subMenuWrap .subMenu li:hover {
+  color: rgb(255, 94, 0);
+}
 .header
   .headerInner
   .headerMenu-box
@@ -477,6 +480,16 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 20px;
   padding: 10px;
+}
+#weatherMap .weatherMapWrapClose {
+  display: flex;
+  justify-content: end;
+  padding: 15px;
+}
+#weatherMap .weatherMapWrapClose img {
+  display: block;
+  position: relative;
+  z-index: 99;
 }
 #weatherMap .weatherCard .weatherTitle {
   display: flex;
