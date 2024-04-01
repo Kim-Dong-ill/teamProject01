@@ -3,15 +3,36 @@
 /* body {
   background-color: #000000c5;
 } */
-
 .header {
   color: white;
   position: fixed;
   z-index: 99999;
   font-size: 17px;
+  font-weight: bold;
   height: 70px;
   width: 100%;
 }
+/* header active */
+.header.active {
+  background-color: white;
+  color: black;
+  position: fixed;
+  z-index: 99999;
+  font-size: 17px;
+  font-weight: bold;
+  height: 70px;
+  width: 100%;
+}
+.header.active .headerNav .navBtn .language #kor {
+  border: 1px solid #000;
+}
+.header.active .headerNav .navBtn #familyBtn {
+  border: 1px solid #000;
+}
+.header.active #burgerMenu {
+  color: #000;
+}
+/* header active end */
 .header p {
   margin-bottom: 0 !important;
 }
@@ -436,12 +457,34 @@
 .mapContentInner .mapContentText .mapPhone {
   padding: 10px 0;
 }
+/* map css end */
+
+/* weather css */
+
 #weatherMap {
-  border: 1px solid #000;
-  width: 500px;
-  height: 500px;
+  width: 800px;
+  height: 600px;
+  display: none;
+  position: fixed;
+  border-radius: 20px;
+  z-index: 999;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
 }
-/* map css */
+#weatherMap .weatherCard {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+  padding: 10px;
+}
+#weatherMap .weatherCard .weatherTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: large;
+  font-weight: bold;
+}
 
 @media screen and (max-width: 768px) {
   .mapModal .mapImg {
