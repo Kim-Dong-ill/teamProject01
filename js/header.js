@@ -2,8 +2,10 @@
 
 //스크롤시 이벤트
 window.addEventListener("scroll", function () {
-  if (window.pageYOffset > 1) {
+  if (window.pageYOffset > 2) {
     console.log("현재 스크롤 Y 위치가 200px보다 크다");
+    $(".header").css("background", "white");
+    $(".header").css("color", "black");
   } else {
     console.log("현재 스크롤 Y 위치가 200px보다 작다");
   }
@@ -218,7 +220,7 @@ function onGetCity(r) {
     params.lat = item.lat; // cities[i].lat
     params.log = item.lon;
     params.id = item.id;
-    // console.log(item.lat);
+    console.log(item.lat);
     console.log(params.lat);
     axios.get(weatherApi, { params }).then(onCreateMaker);
   });
@@ -230,6 +232,8 @@ function onCreateMaker(r) {
   //   console.log(cityCnt);
 
   let city = cities.filter(function (v) {
+    // console.log("v id" + v.id);
+    // console.log("r.data id" + r.data.id);
     return v.id === r.data.id;
   });
   console.log(city);
