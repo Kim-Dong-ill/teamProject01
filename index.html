@@ -109,13 +109,13 @@
           </ul>
         </div>
         <div class="headerNav">
-          <div class="serch">
+          <div class="serch" id="serch">
             <a href="#"><img src="./images/hd_search_icon.png" alt="" /></a>
           </div>
           <div class="navBtn">
             <div class="language">
               <ul>
-                <li class="kor">
+                <li class="kor" id="kor">
                   <p>KOR</p>
                   <img src="/images/drop_down_wh.png" alt="" />
                 </li>
@@ -131,19 +131,19 @@
             </div>
             <div class="family-site">
               <ul>
-                <li class="familyBtn">
+                <li class="familyBtn" id="familyBtn">
                   <p>FAMILY SITE</p>
                   <img src="/images/drop_down_wh.png" alt="" />
                 </li>
                 <div class="familyEct">
-                  <li><a href="#">루나 직영몰</a></li>
-                  <li><a href="#">본사 직영몰</a></li>
-                  <li><a href="#">애경 S.T</a></li>
+                  <li onclick="family1(0)"><a href="#">애경 산업(주)</a></li>
+                  <li onclick="family1(1)"><a href="#">루나 직영몰</a></li>
+                  <li onclick="family1(2)"><a href="#">애경 S.T</a></li>
                 </div>
               </ul>
             </div>
           </div>
-          <div class="burgerMenu">
+          <div class="burgerMenu" id="burgerMenu">
             <a href="#"><i class="fa-solid fa-bars"></i></a>
           </div>
         </div>
@@ -228,13 +228,15 @@
     <!-- map modal end -->
 
     <!-- weather modal -->
-    <div id="weatherMap">
-      <div class="weatherCard">
-        <div class="weatherTitle">
-          <div class="weatherName">이름a</div>
-          <div class="weatherImg">아이콘</div>
-        </div>
-        <div class="weatherTemp">현재 온도</div>
+    <div class="weatherMapWrap">
+      <div id="weatherMap">
+        <!-- <div class="weatherCard">
+          <div class="weatherTitle">
+            <div class="weatherName">이름</div>
+            <div class="weatherImg">아이콘</div>
+          </div>
+          <div class="weatherTemp">현재 온도</div>
+        </div> -->
       </div>
     </div>
     <!-- weather modal end -->
@@ -406,6 +408,9 @@
 
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- kakao map -->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7b2abe9be42ad1bc0c2df885dee2ee92"></script>
 
     <!-- isotope -->
     <link rel="stylesheet" href="/js/isotope.pkgd.min.js" />
