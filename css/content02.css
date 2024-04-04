@@ -1,208 +1,183 @@
 /* 하태민님 */
 
-
-
-
-
 /*con5st*/
-.con5st .swiper img{
-    width: 100%;
-    height: 100%;
+.con5st .swiper img {
+  width: 100%;
+  height: 100%;
 }
-.con5st .col-6{
-    
+.con5st .col-6 {
 }
-.con5st h2{
-    
-    padding-bottom: 20px ;
-    
+.con5st h2 {
+  padding-bottom: 20px;
 }
-.con5st .text{
-    font-size: 15px;
-    color: #BFBFBF;
-    padding-bottom: 80px;
+.con5st .text {
+  font-size: 15px;
+  color: #bfbfbf;
+  padding-bottom: 80px;
 }
-.con5st p{
-    
-    
+.con5st p {
 }
-.con5st .button{
-    background-color: #fafafa;
-    border-radius: 30px;
-    text-align: center;
-    padding: 10px;
-    width: 130px;
-    
+.con5st .button {
+  background-color: #fafafa;
+  border-radius: 30px;
+  text-align: center;
+  padding: 10px;
+  width: 130px;
 }
-.con5st a{
-    display: block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:9px;
-   
+.con5st a {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
 }
-.con5st .button>a>img{
-    
+.con5st .button > a > img {
 }
-.con5st #mobileButton{
-    display: none;
+.con5st #mobileButton {
+  display: none;
 }
 
 /* 컨테이너 6 */
-.containerWrap{
-    background-color: #fafafa;
+.containerWrap {
+  background-color: #fafafa;
 }
 .con6st {
-   padding: 50px 0px;
-    /* border: 1px solid; */
-    position: relative;
+  padding: 50px 0px;
+  /* border: 1px solid; */
+  position: relative;
 }
-.con6st .rowWrap{
-    width: 1240px;
-    margin: 0 auto;
-    /* padding: 50px; */
-    border: 1px solid;
+.con6st .rowWrap {
+  width: 1240px;
+  margin: 0 auto;
+  /* padding: 50px; */
+  border: 1px solid;
 }
-.con6st .swiper-slide{
-    /* overflow: hidden; */
-    /* height: 430px; */
-/* border: 10px solid #000; */
+.con6st .swiper-slide {
+  /* overflow: hidden; */
+  /* height: 430px; */
+  /* border: 10px solid #000; */
 }
-.con6st .imgWrap{
-    /* height: inherit; */
-/* overflow: hidden; */
+.con6st .imgWrap {
+  /* height: inherit; */
+  /* overflow: hidden; */
+}
 
+.con6st .swiper img {
+  /* border: 5px solid #e20707; */
+  object-fit: cover;
+  width: 630px;
+  height: 480px;
 }
-
-.con6st .swiper img{
-    /* border: 5px solid #e20707; */
-    object-fit: cover;
-    width: 630px;
-    height: 480px;
+.con6st .textbox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.con6st .textbox{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
+.con6st .titletextbox {
+  border-top: 1px solid;
+  padding: 30px 0px;
 }
-.con6st .titletextbox{
-    border-top: 1px  solid ;
-    padding: 30px 0px;
+.mySwiper2 {
+  position: relative;
 }
-.mySwiper2{
-    position: relative;
+.swiper-horizontal > .swiper-pagination-bullets {
+  width: 50%;
 }
-.swiper-horizontal>.swiper-pagination-bullets{
-    width: 50%;
-  
-}
-.swiper-horizontal>.swiper-pagination-bullets> .swiper-pagination-bullet{
-    margin-left: 10px;
-    margin-right: 10px;
-  
+.swiper-horizontal > .swiper-pagination-bullets > .swiper-pagination-bullet {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .swiper-pagination-bullets > .swiper-pagination-bullet {
-    
-    opacity: 1;
-    width: 10px;
-    height: 10px;
-    position: relative;
-    background-color: gray;
-  }
-  .swiper-pagination-bullets > .swiper-pagination-bullet-active{
-    background-color: white;
-  }
-  .swiper-pagination-bullets > .swiper-pagination-bullet-active::before {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    
-    border: 1px solid white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-  }
-  .swiper-button-next.arrow{
-    color: black;
-    position: absolute;
-
-    left: 101%;
-    
-   
-  }
-  .swiper-button-prev.arrow{
-    color: black;
-    position: absolute;
-    left: -3%
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  background-color: gray;
 }
-.con6st .bgnews{
-    position: absolute;
-    bottom: 0%;
-    left: 70%;
+.swiper-pagination-bullets > .swiper-pagination-bullet-active {
+  background-color: white;
+}
+.swiper-pagination-bullets > .swiper-pagination-bullet-active::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
 
+  border: 1px solid white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.swiper-button-next.arrow {
+  color: black;
+  position: absolute;
+
+  left: 101%;
+}
+.swiper-button-prev.arrow {
+  color: black;
+  position: absolute;
+  left: -3%;
+}
+.con6st .bgnews {
+  position: absolute;
+  bottom: 0%;
+  left: 70%;
 }
 
+@media screen and (max-width: 991px) {
+  .con5st .button {
+    display: none;
+  }
+  .con5st .text {
+    padding-bottom: 0px;
+  }
 
-
-@media screen and (max-width: 768px){
-    .con5st .button{
-        display: none;
-    }
-    .con5st .text{
-        padding-bottom: 0px;
-    }
-    
-    .con5st #mobileButton{
-        display: block;
-        background-color: #fafafa;
+  .con5st #mobileButton {
+    display: block;
+    background-color: #fafafa;
     border-radius: 30px;
     margin: 10px;
     margin-top: 30px;
     text-align: center;
     padding: 10px;
     width: 130px;
-    }
-    .con5st #mobileButton img{
-        width: auto;
-        height: auto;
-    }
+  }
+  .con5st #mobileButton img {
+    width: auto;
+    height: auto;
+  }
 
-    /*컨테이너6 모바일*/
-    .con6st .d-flex{
-        flex-direction: column;
-    }
-    .con6st .swiper-button-next::after{
-        content: "";
-    }
-    .con6st .swiper-button-prev::after{
-        content: "";
-    }
-    .swiper-horizontal>.swiper-pagination-bullets{
-        width: 100%;
-      
-    }
-    .con6st .swiper-pagination{
-        bottom: 30%;
-    }
-    .con6st .imgWrap{
-        height: 480px;
-        margin-top: 27%;
-    }
-    
-    .swiper-slide .textbox .titlebox {
-        position: absolute; 
-        top: 0; 
-        left: 0; 
-        z-index: 1; 
-      }
-    .con6st .bgnews{
-        display: none;
-    }
+  /*컨테이너6 모바일*/
+  .con6st .d-flex {
+    flex-direction: column;
+  }
+  .con6st .swiper-button-next::after {
+    content: "";
+  }
+  .con6st .swiper-button-prev::after {
+    content: "";
+  }
+  .swiper-horizontal > .swiper-pagination-bullets {
+    width: 100%;
+  }
+  .con6st .swiper-pagination {
+    bottom: 30%;
+  }
+  .con6st .imgWrap {
+    height: 480px;
+    margin-top: 27%;
+  }
 
-   
-} 
+  .swiper-slide .textbox .titlebox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .con6st .bgnews {
+    display: none;
+  }
+}

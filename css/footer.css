@@ -2,22 +2,54 @@
 .footer {
   padding-top: 50px;
 }
-.footerInner {
-  display: flex;
-  height: 100%;
+.footerImg {
+  margin-bottom: 40px;
 }
-.laft {
-  margin-right: auto;
-}
-.address mo_989 {
-  color: rgba(0, 0, 0, 0.5);
-}
-#footerText {
-  font-size: large;
+.footerText {
+  font-size: larger;
   font-weight: bold;
 }
-
-#footerImg img {
+.imgWrap {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.imgWrap img {
   height: 50px;
-  margin-right: 20px;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 991px) {
+  .footerImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footerText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .imgWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footerB {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+  }
+}
+@media screen and (max-width: 679px) {
+  .footerB {
+    display: none;
+  }
+  .footerText {
+    font-size: 18px;
+  }
+  .footer {
+    padding-bottom: 50px;
+  }
 }
