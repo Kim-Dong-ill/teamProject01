@@ -1,6 +1,7 @@
 // 김동일
 
 //스크롤시 header 이벤트
+
 window.addEventListener("scroll", function () {
   if (window.pageYOffset > 10) {
     $(".header").addClass("active");
@@ -25,10 +26,18 @@ window.addEventListener("scroll", function () {
 
 // 언어 버튼 토글
 $(".kor").click(function () {
-  $(".kor").css("border-radius", 0);
-  $(".kor").css("border-top-left-radius", 25);
-  $(".kor").css("border-top-right-radius", 25);
-  $(".languageBtn").stop().slideDown();
+  if (window.pageYOffset < 10) {
+    $(".kor").css("border-radius", 0);
+    $(".kor").css("border-top-left-radius", 25);
+    $(".kor").css("border-top-right-radius", 25);
+    $(".languageBtn li").css("background", "");
+    $(".languageBtn li").css("border-color", "white");
+    $(".languageBtn").stop().slideDown();
+  } else {
+    $(".languageBtn li").css("background", "white");
+    $(".languageBtn li").css("border-color", "black");
+    $(".languageBtn").stop().slideDown();
+  }
 });
 $(".language").mouseleave(function () {
   $(".kor").css("border-radius", 40);
@@ -37,10 +46,18 @@ $(".language").mouseleave(function () {
 
 //FAMILY사이트 버튼 토글
 $(".familyBtn").click(function () {
-  $(".familyBtn").css("border-radius", 0);
-  $(".familyBtn").css("border-top-left-radius", 25);
-  $(".familyBtn").css("border-top-right-radius", 25);
-  $(".familyEct").stop().slideDown();
+  if (window.pageYOffset < 10) {
+    $(".familyBtn").css("border-radius", 0);
+    $(".familyBtn").css("border-top-left-radius", 25);
+    $(".familyBtn").css("border-top-right-radius", 25);
+    $(".familyEct li").css("background", "");
+    $(".familyEct li").css("border-color", "white");
+    $(".familyEct").stop().slideDown();
+  } else {
+    $(".familyEct li").css("background", "white");
+    $(".familyEct li").css("border-color", "black");
+    $(".familyEct").stop().slideDown();
+  }
 });
 $(".family-site").mouseleave(function () {
   $(".familyBtn").css("border-radius", 80);
@@ -50,7 +67,8 @@ $(".family-site").mouseleave(function () {
 // 메뉴 슬라이드 다운 업
 $(".menu-wrap").mouseenter(function () {
   $(".header").removeClass("active");
-  $(".subMenuWrap").stop().slideDown();
+  $(".subMenu").stop().slideDown();
+  $("#subMenuBackGroundColor").stop().slideDown();
   $(".header").css("background", "white");
   $(".subMenuWrap").css("background", "white");
   $(".kor").css("border-color", "black");
@@ -64,15 +82,23 @@ $(".menu-wrap").mouseenter(function () {
   // font-weight: bold;
 });
 $(".menu-wrap").mouseleave(function () {
-  $(".subMenuWrap").stop().slideUp();
-  $(".header").css("background", "");
-  $(".header").css("color", "white");
-  $(".familyBtn").css("border-color", "white");
-  $(".kor").css("border-color", "white");
-  $(".headerLogo img").attr("src", "./images/header_logo_wh.png");
-  $(".serch img").attr("src", "./images/hd_search_icon.png");
-  $(".familyBtn img").attr("src", "/images/drop_down_wh.png");
-  $(".kor img").attr("src", "/images/drop_down_wh.png");
+  if (window.pageYOffset < 10) {
+    $(".subMenu").stop().slideUp();
+    $("#subMenuBackGroundColor").stop().slideUp();
+    $(".header").css("background", "");
+    $(".header").css("color", "white");
+    $(".familyBtn").css("border-color", "white");
+    $(".kor").css("border-color", "white");
+    $(".headerLogo img").attr("src", "./images/header_logo_wh.png");
+    $(".serch img").attr("src", "./images/hd_search_icon.png");
+    $(".familyBtn img").attr("src", "/images/drop_down_wh.png");
+    $(".kor img").attr("src", "/images/drop_down_wh.png");
+  } else {
+    $(".subMenu").stop().slideUp();
+    $("#subMenuBackGroundColor").stop().slideUp();
+    $(".header").css("background", "white");
+    $(".header").css("color", "black");
+  }
 });
 
 //버거메뉴 클릭시 모바일 메뉴 슬라이드
