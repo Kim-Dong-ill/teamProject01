@@ -1,7 +1,33 @@
 // 김동일
 
-//스크롤시 header 이벤트
+//스크롤시 stiky 이벤트
+window.addEventListener("scroll", function () {
+  if (window.pageYOffset > 1927) {
+    $(".arrowUp").css("position", "absolute");
+    $(".arrowUp").css("right", 50);
+    $(".arrowUp").css("bottom", "1%");
+  } else {
+    $(".arrowUp").css("position", "fixed");
+    $(".arrowUp").css("right", 50);
+    $(".arrowUp").css("bottom", 50);
+  }
+});
+window.addEventListener("scroll", function () {
+  if (window.pageYOffset < 99) {
+    $(".arrowUp").css("color", "white");
+  } else {
+    $(".arrowUp").css("color", "black");
+  }
+});
+$(".arrowUp").click(function () {
+  if (window.pageYOffset > 99) {
+    $("html,body").animate({ scrollTop: 0 }, 0);
+  } else {
+    $("html,body").animate({ scrollTop: $(document).height() }, 0);
+  }
+});
 
+//스크롤시 header 이벤트
 window.addEventListener("scroll", function () {
   if (window.pageYOffset > 10) {
     $(".header").addClass("active");
